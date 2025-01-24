@@ -9,6 +9,8 @@ let gender = 0;
 
 //formula 
 
+// Test out your code
+
 function getDayOfWeek() {
     const CC = Math.floor(year / 100);
     const YY = year % 100;
