@@ -2,11 +2,11 @@ const maleAkanNames = ['Kwasi', 'Kwadwo', 'Kwabena', 'Kwaku', 'Yaw', 'Kofi', 'Kw
 const femaleAkanNames = ['Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua', 'Ama']
 
 
-let date = 25;
-let month = 1;
-let year = 2025;
+let date = 15;
+let month = 8;
+let year = 1995;
 // 0 represents Male and 1 represents female
-let gender = 0;
+let gender = 1;
 let indexOfDay = getDayOfWeek();
 console.log(indexOfDay)
 
