@@ -206,7 +206,7 @@ footer ul{
     margin-left: 20%;
     margin-top: 1rem;
 }
-#akanName{
+#AkanName, #dayWeek{
     color: #FF7043;
     font-size: 25px;
     font-family: 'Poppins', serif;
