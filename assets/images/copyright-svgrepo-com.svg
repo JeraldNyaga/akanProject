@@ -1,7 +1,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
-<svg width="100px" height="100px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="800px" height="800px" viewBox="-1.2 -1.2 26.40 26.40" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#f5f5f5">
 <g id="SVGRepo_bgCarrier" stroke-width="0"/>
 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-<g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM10.1213 10.1213C8.94974 11.2929 7.05025 11.2929 5.87867 10.1213C4.7071 8.94975 4.7071 7.05025 5.87867 5.87868C7.05025 4.70711 8.94974 4.70711 10.1213 5.87868L11.5355 4.46447C9.58291 2.51184 6.41708 2.51184 4.46446 4.46447C2.51184 6.41709 2.51184 9.58291 4.46446 11.5355C6.41708 13.4882 9.58291 13.4882 11.5355 11.5355L10.1213 10.1213Z" fill="#000000"/> </g>
+<g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M19 12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12C5 8.13401 8.13401 5 12 5C13.8565 5 15.637 5.7375 16.9497 7.05025C18.2625 8.36301 19 10.1435 19 12Z" stroke="#f5f5f5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> <path d="M14.646 9.00002C13.0379 7.58179 10.5975 7.6838 9.11336 9.23129C7.62921 10.7788 7.62921 13.2213 9.11336 14.7688C10.5975 16.3162 13.0379 16.4182 14.646 15" stroke="#f5f5f5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </g>
 </svg>
