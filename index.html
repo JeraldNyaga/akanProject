@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./assets/css/styles.css">
-        <script src="./scripts/akanLogic.js" defer></script>
+        <script defer src="./scripts/index.js"></script>
     </head>
     <body>
         <header>
@@ -46,22 +46,22 @@
             <div class="formBackground">
                 <h2>When were you born?</h2>
                 <div class="formDiv">
-                    <form action="" onsubmit="getAkanName(event)">
+                    <form onsubmit="getAkanName(event)">
                         <label id="dateLabel" for="date">Date:</label>
-                        <input id="date" type="number" min="1" max="31" required> <br>
+                        <input id="date" type="number" min="1" max="31" placeholder="Date: 1 - 31" required> <br><br>
 
                         <label id="monthLabel" for="month">Month:</label>
-                        <input type="number" name="month" id="month" min="1" max="12" required><br>
+                        <input type="number" name="month" id="month" min="1" max="12" placeholder="Month: 1 - 12" required><br><br>
                         
                         <label id="yearLabel" for="year">Year:</label>
-                        <input type="number" id="year" min="1800" max="2025"required> <br>
+                        <input type="number" id="year" min="1800" max="2025" placeholder="Year: 1800 - 2025" required> <br><br>
 
                         <label id="genderLabel" for="Gender">Gender:</label>
                         <select name="gender" id="gender">
                             <option value="0">Male</option>
                             <option value="1">Female</option>
                         </select>
-                        <br>
+                        <br><br>
                         <input id="clearButton" class="button" type="reset">
 
                         <input id="submitButton" type="submit" class="button" value="Submit">
@@ -73,8 +73,8 @@
         </div>
     </div>
     <div id="results">
-            <p id="AkanName"><span id="akanSpan"></span></p>
-            <p id="dayWeek"><span id="dayBorn"></span></p>
+            <p id="AkanName">Your Akan name is:<span id="akanSpan"></span></p>
+            <p id="dayWeek">You were born on:<span id="dayBorn"></span></p>
     </div>
 
     </section>
@@ -87,13 +87,13 @@
         </div>
         <div class="socialIcons">
             <figure class="reachMeSocials">
-                <a href=""><img src="./assets/images/github-142-svgrepo-com.svg" alt="gitHub icon"></a>
+                <a href="https://github.com/JeraldNyaga"><img src="./assets/images/github-142-svgrepo-com.svg" alt="gitHub icon"></a>
             </figure>
             <figure class="reachMeSocials">
-                <a href=""><img src="./assets/images/instagram-svgrepo-com.svg" alt="Instagram Icon"></a>
+                <a href="https://www.instagram.com/"><img src="./assets/images/instagram-svgrepo-com.svg" alt="Instagram Icon"></a>
             </figure>
             <figure class="reachMeSocials">
-                <a href=""><img src="./assets/images/email-1-svgrepo-com.svg" alt="Email icon"></a>
+                <a href="mailto:jeraldnyaga15@gmail.com"><img src="./assets/images/email-1-svgrepo-com.svg" alt="Email icon"></a>
             </figure>
         </div>
         <div class="menuNav">
