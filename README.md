@@ -27,7 +27,7 @@ The results achieved were perfect  and accurate.
 
 - Given the user inputs an invalid date (e.g., February 30th or April 31st).
 - When the user clicks the "Submit" button.
-- Then the system shows an error message: "Confirm whether your date is accurate. Month: X, Year: Y, Date: Z".
+- Then the system shows an error message: "Invalid date".
 
 3. Scenario 3: Missing inputs
 
@@ -40,6 +40,9 @@ The results achieved were perfect  and accurate.
 - Invalid inputs trigger helpful error messages without crashing the app.
 - Results are displayed dynamically without requiring a page reload.
 - The application gracefully handles edge cases like leap years and invalid dates.
+
+## Known bugs
+- Once the user input the wrong date, they have to refresh the page so that they can input the right date.
 
 
 ## Set up instructions
