@@ -58,6 +58,13 @@ h1{
     text-align: center;
     margin: 1rem 0;
 }
+h2{
+    font-family: Merriweather, sans-serif;
+    font-size: 28px;
+    text-align: center;
+    margin: 1rem 0;
+    color: #D32F2F;
+}
 .hero{
     display: flex;
     gap: 1rem;
@@ -78,7 +85,7 @@ h1{
     width: 40%;
     font-size: 27px;
 }
-#hero{
+#hero, #form{
     margin-bottom: 0.5rem;
 }
 footer{
@@ -117,4 +124,29 @@ footer ul{
 
 .reachMeSocials img{
     margin-top: 1rem;
+}
+
+.formBackground{
+    background-color: #F5E6CC;
+    height: 530px;
+    width: 530px;
+    border: 2px solid #6D4C41;
+    border-radius: 2px;
+}
+
+.formName{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.formDiv{
+    /* display: flex;
+    gap: 1rem; */
+}
+.formName img{
+    width: 400px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-top: 2rem;
 }
