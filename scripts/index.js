@@ -22,16 +22,12 @@ function getDayOfWeek() {
 function getAkanName(event){
     event.preventDefault();
     let gender = Number(document.getElementById("gender").value);
-    let date = Number(document.getElementById("date").value);
-    let month = Number(document.getElementById("month").value);
-    let year = Number(document.getElementById("year").value);
-
     if (gender == 0){
         akanName = maleAkanNames[getDayOfWeek()];
-        return showResult(akanName, validateMonthInput(year, month, date), getDayOfWeek())
+        return showResult(akanName, validateMonthInput(), getDayOfWeek())
     } else if(gender == 1){
         akanName = femaleAkanNames[getDayOfWeek()];
-        return showResult(akanName, validateMonthInput(year, month, date), getDayOfWeek());
+        return showResult(akanName, validateMonthInput(), getDayOfWeek());
     } else{
         return 'Invalid name';
     }
@@ -45,21 +41,35 @@ function checkWhetherLeap(userYear) {
   }
 }
 
-function validateMonthInput(year, month, date){
-    const leapCheck = checkWhetherLeap(year);
+function validateMonthInput(){
+    let checkYear = Number(document.getElementById("year").value);
+    let checkMonth = Number(document.getElementById("month").value);
+    let checkDate = Number(document.getElementById("date").value);
+    const leapCheck = checkWhetherLeap(checkYear);
 
-    if(!leapCheck && month === 2 && date > 28 || leapCheck && month === 2 && date > 29){
-        return `error`;
+    if(((!leapCheck) && (checkMonth === 2) && (checkDate > 28))){
+        let errorMessage = `Invalid February date.\nFebruary has 28 days in a year that is not leap.`
+        return errorMessage;
 
-    } else if (month in thirtyMonthday && date > 30) {
-        return `error`;
-
-    } else if(month > 12 || month < 1 || date > 31 || date < 1 || year > 2025 || year < 1800){
-        console.log(`Month ${month}, year ${year}, date ${date}`);
-        return `error`
-    }
-    else{
-        return true
+    } else if (leapCheck && checkMonth === 2 && checkDate > 29) {
+        let errorMessage = `Invalid February date.\nFebruary has a maximum of 29 days in a year that is leap.`;
+        return errorMessage;
+    } else if (thirtyMonthday.includes(checkMonth) && checkDate > 30) {
+        let errorMessage = `Invalid date.\nThe ${checkMonth} has a maximum of 30 days in a year that is not leap.`;
+        return errorMessage;
+    } else if (
+      checkMonth > 12 ||
+      checkMonth < 1 ||
+      checkDate > 31 ||
+      checkDate < 1 ||
+      checkYear > 2025 ||
+      checkYear < 1800
+    ) {
+      return console.log(
+        `Month ${checkMonth}, year ${checkYear}, date ${checkDate}`
+      );
+    } else {
+      return true;
     }
 }
 
@@ -75,7 +85,16 @@ function showResult(akanName, validation, indexOfDay){
         document.getElementById("akanSpan").innerText = preMessageAkan;
         document.getElementById("dayBorn").innerText = preMessageDay;
     }
+    else if(validation !== true){
+        let errorMsg = validateMonthInput();
+        document.getElementById("results").style.display = "block";
+        document.getElementById("results").style.backgroundColor = "#D32F2F";   
+        document.getElementById("AkanName").innerText = errorMsg;
+        document.getElementById("dayWeek").innerText = "Try Again";
+        document.getElementById("AkanName").style.color = "#F5E6CC";
+        document.getElementById("dayWeek").style.color = "#F5E6CC";
+    }
     else{
-        return `error`;
+        console.log(`Uncaught error`);
     }
 }
