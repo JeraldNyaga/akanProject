@@ -197,3 +197,23 @@ footer ul{
     cursor: pointer;
     background-color: #FFB300;
 }
+.results{
+    display: none;
+    background-color: #6D4C41;
+    border: 1px solid #388E3C;
+    border-radius: 10px;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 1rem;
+}
+#akanName{
+    color: #FF7043;
+    font-size: 25px;
+    font-family: 'Poppins', serif;
+}
+#akanSpan, #dayBorn{
+    color:#388E3C;
+    font-family: Cinzel, sans-serif;
+    font-size: 25px;
+    margin-left: 3px;
+}

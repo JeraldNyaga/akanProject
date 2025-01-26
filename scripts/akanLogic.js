@@ -22,7 +22,8 @@ function getDayOfWeek() {
 
     return (indexOfDay + 7) % 7;
 }
-function getAkanName(){
+function getAkanName(event){
+    event.preventDefault();
     if (gender == 0){
         akanName = maleAkanNames[indexOfDay];
         return showResult(akanName, validateMonthInput(year, month, date), indexOfDay)
