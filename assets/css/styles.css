@@ -128,10 +128,10 @@ footer ul{
 
 .formBackground{
     background-color: #F5E6CC;
-    height: 530px;
+    height: 430px;
     width: 530px;
     border: 2px solid #6D4C41;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 
 .formName{
@@ -139,14 +139,61 @@ footer ul{
     justify-content: space-evenly;
 }
 
-.formDiv{
-    /* display: flex;
-    gap: 1rem; */
-}
 .formName img{
     width: 400px;
-    height: 450px;
+    height: 350px;
     object-fit: cover;
     border-radius: 20px;
     margin-top: 2rem;
+}
+
+.formDiv label{
+    font-family: 'Poppins', serif;
+    font-size: 30px;
+    color: #6D4C41;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+#dateLabel, #yearLabel{
+    margin-right: 20px;
+}
+.formDiv{
+    margin-top: 10%;
+}
+
+
+.formDiv input, select{
+    width: 30%;
+    height: 35px;
+    margin-left: 2.5rem;
+    margin-bottom: 0.5rem;
+    background-color: #0288D1;
+    border: 1px solid #FF7043;
+    border-radius: 10px;
+    color: #f5f5f5;
+    font-size: 25px;
+}
+
+.button{
+    margin: 1rem;
+    color: #f5f5f5;
+}
+#clearButton{
+    background-color: #D32F2F;
+    width: 35%;
+    font-size: 20px;
+    padding: 10px;
+    height: 45px;
+}
+#submitButton{
+    background-color: #388E3C;
+    width: 35%;
+    font-size: 20px;
+    padding: 10px;
+    height: 45px;
+}
+
+#submitButton:hover, #clearButton:hover{
+    cursor: pointer;
+    background-color: #FFB300;
 }
