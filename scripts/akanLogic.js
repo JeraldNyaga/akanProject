@@ -1,13 +1,14 @@
 const maleAkanNames = ['Kwame','Kwasi', 'Kwadwo', 'Kwabena', 'Kwaku', 'Yaw', 'Kofi']
 const femaleAkanNames = ['Ama','Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua']
+const thirtyMonthday = [4, 6, 9, 11];
 
 // 0  means Male
 // 1 means female
 
-let date = 25;
-let month = 12;
-let year = 2001;
-let gender = 0;
+let date = Number(document.getElementById('date').value);
+let month = Number(document.getElementById('month').value);
+let year = Number(document.getElementById('year').value);
+let gender = Number(document.getElementById('gender').value);
 let indexOfDay = getDayOfWeek();
 
 function getDayOfWeek() {
@@ -30,5 +31,12 @@ function getAkanName(indexOfDayWeek){
     } else{
         return 'Invalid name';
     }
+}
+
+// function checkLeap(year){
+//     if(year%)
+// }
+
+function validateInput(){
 }
 
