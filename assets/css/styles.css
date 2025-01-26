@@ -3,3 +3,81 @@
     margin: 0;
     box-sizing: border-box;
 }
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #D32F2F;
+    height: 95px;
+}
+
+.headerDiv{
+    display: flex;
+    gap: 5px;
+}
+
+.headerDiv img{
+    height: 75px;
+    border-radius: 20px;
+    margin-top: 0.7rem;
+    margin-left: 0.4rem;
+}
+.headerDiv p{
+    font-size: 36px;
+    font-family: Cinzel, sans-serif;
+    color: #f5f5f5;
+    margin-top: 1.8rem;
+}
+
+.menuNav ul{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.menuNav ul li{
+    list-style-type: none; 
+    margin-top: 1.8rem;
+}
+.menuNav a{
+    color: #f5f5f5;
+    font-family: Merriweather;
+    font-size: 25px;
+    text-decoration: none;
+}
+.findMe{
+    margin-top: 1.8rem;
+    margin-right: 0.4rem;
+}
+.menuNav a:hover{
+    color: #FFB300;
+    text-decoration: underline;
+}
+h1{
+    font-family: Merriweather, sans-serif;
+    font-size: 36px;
+    text-align: center;
+    margin: 1rem 0;
+}
+.hero{
+    display: flex;
+    gap: 1rem;
+    justify-content: center; 
+}
+.hero img{
+    width: 600px;
+    height: 590px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.hero p{
+    font-family: Lora, serif;
+    display: flex;
+    align-items: center;
+    color: #6D4C41;
+    width: 40%;
+    font-size: 27px;
+}
+#hero{
+    margin-bottom: 0.5rem;
+}
