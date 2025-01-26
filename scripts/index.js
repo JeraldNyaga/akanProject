@@ -11,6 +11,20 @@ function getInfo(event){
 
 
 }
+const thirtyMonthday = [4, 6, 9, 11];
+
+function validateMonthInput(year, month) {
+  const leapCheck = checkWhetherLeap(year);
+
+  if (!leapCheck && month > 28) {
+    return `Error Message`;
+  } else if (month in thirtyMonthday && month > 30) {
+    return `Invalid date`;
+  } else {
+    return true;
+  }
+}
+validateMonthInput(2004, 2);
 
 let thirty = [4, 6, 9, 11];
 console.log(typeof thirty[1])

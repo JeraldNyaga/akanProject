@@ -33,10 +33,27 @@ function getAkanName(indexOfDayWeek){
     }
 }
 
-// function checkLeap(year){
-//     if(year%)
-// }
-
-function validateInput(){
+function checkWhetherLeap(userYear) {
+  if ((userYear % 4 == 0 && userYear % 100 != 0) || userYear % 400 == 0) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
+function validateMonthInput(year, month, date){
+    const leapCheck = checkWhetherLeap(year);
+
+    if(!leapCheck && month === 2 && date > 28){
+        return `Error Message`;
+    }
+    else if (month in thirtyMonthday && date > 30) {
+        return  `Invalid date`
+    }
+    else if(month > 12 || month < 1 || date > 31 || date < 1 || year > 2025 || year || 1800){
+        return `invalid date`
+    }
+    else{
+        return true
+    }
+}
