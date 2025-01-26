@@ -64,6 +64,17 @@ function showResult(akanName, validation, indexOfDay){
     if(validation){
         let nameAkan = akanName;
         let dayBorn = daysOfWeek[indexOfDay];
-        console.log(`Your Akan name is ${nameAkan}, you were born on ${dayBorn}`)
+
+        let preMessageAkan = `Your Akan name is: `;
+        let preMessageDay = `You were born on: `;
+
+        document.getElementById("results").style.display="block";
+        document.getElementById("AkanName").innerText(preMessageAkan);
+        document.getElementById("dayWeek").innerText(preMessageDay);
+        document.getElementById("akanSpan").innerText(nameAkan);
+        document.getElementById("dayBorn").innerText(dayBorn);
+    }
+    else{
+        alert("Incorrect date entered");
     }
 }

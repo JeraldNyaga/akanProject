@@ -197,7 +197,7 @@ footer ul{
     cursor: pointer;
     background-color: #FFB300;
 }
-.results{
+#results{
     display: none;
     background-color: #6D4C41;
     border: 1px solid #388E3C;
