@@ -2,6 +2,8 @@ const maleAkanNames = ['Kwame','Kwasi', 'Kwadwo', 'Kwabena', 'Kwaku', 'Yaw', 'Ko
 const femaleAkanNames = ['Ama','Akosua', 'Adwoa', 'Abenaa', 'Akua', 'Yaa', 'Afua']
 const thirtyMonthday = [4, 6, 9, 11];
 const daysOfWeek = ["Saturday","Sunday","Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+const monthsOfYear = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
 
 // 0  means Male
 // 1 means female
@@ -46,17 +48,19 @@ function validateMonthInput(){
     let checkMonth = Number(document.getElementById("month").value);
     let checkDate = Number(document.getElementById("date").value);
     const leapCheck = checkWhetherLeap(checkYear);
+    console.log(`${checkDate} ${checkMonth} ${checkYear}`);
 
-    if(((!leapCheck) && (checkMonth === 2) && (checkDate > 28))){
+    if(((!leapCheck) && (checkMonth == 2) && (checkDate > 28))){
         let errorMessage = `Invalid February date.\nFebruary has 28 days in a year that is not leap.`
-        return errorMessage;
+        return [false, errorMessage];
 
-    } else if (leapCheck && checkMonth === 2 && checkDate > 29) {
+    } else if ((leapCheck) && (checkMonth == 2) && (checkDate > 29)) {
         let errorMessage = `Invalid February date.\nFebruary has a maximum of 29 days in a year that is leap.`;
-        return errorMessage;
-    } else if (thirtyMonthday.includes(checkMonth) && checkDate > 30) {
-        let errorMessage = `Invalid date.\nThe ${checkMonth} has a maximum of 30 days in a year that is not leap.`;
-        return errorMessage;
+        return [false, errorMessage];
+
+    } else if ((thirtyMonthday.includes(checkMonth)) && (checkDate > 30)) {
+        let errorMessage = `Invalid date.\n${monthsOfYear[checkMonth-1]} has a maximum of 30 days.`;
+        return [false, errorMessage];
     } else if (
       checkMonth > 12 ||
       checkMonth < 1 ||
@@ -65,16 +69,14 @@ function validateMonthInput(){
       checkYear > 2025 ||
       checkYear < 1800
     ) {
-      return console.log(
-        `Month ${checkMonth}, year ${checkYear}, date ${checkDate}`
-      );
+      return [false, `Injected data`];
     } else {
-      return true;
+      return [true, `Success`];
     }
 }
 
 function showResult(akanName, validation, indexOfDay){
-    if(validation){
+    if(validation[0]){
         let nameAkan = akanName;
         let dayBorn = daysOfWeek[indexOfDay];
 
@@ -85,16 +87,13 @@ function showResult(akanName, validation, indexOfDay){
         document.getElementById("akanSpan").innerText = preMessageAkan;
         document.getElementById("dayBorn").innerText = preMessageDay;
     }
-    else if(validation !== true){
-        let errorMsg = validateMonthInput();
+    else{
+        let errorMsg = validateMonthInput()[1];
         document.getElementById("results").style.display = "block";
         document.getElementById("results").style.backgroundColor = "#D32F2F";   
         document.getElementById("AkanName").innerText = errorMsg;
         document.getElementById("dayWeek").innerText = "Try Again";
         document.getElementById("AkanName").style.color = "#F5E6CC";
         document.getElementById("dayWeek").style.color = "#F5E6CC";
-    }
-    else{
-        console.log(`Uncaught error`);
     }
 }
