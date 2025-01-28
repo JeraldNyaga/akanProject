@@ -200,8 +200,7 @@ input::placeholder{
     cursor: pointer;
     background-color: #FFB300;
 }
-#results{
-    display: none;
+.resultsAccept{
     background-color: #6D4C41;
     border: 1px solid #388E3C;
     border-radius: 10px;
@@ -213,6 +212,8 @@ form{
     padding: 25px;
 }
 #AkanName, #dayWeek{
+    display: inline-block;
+    padding-left: 2px;
     color: #FF7043;
     font-size: 30px;
     font-family: 'Poppins', serif;
@@ -224,4 +225,16 @@ form{
     font-family: Cinzel, sans-serif;
     font-size: 30px;
     margin-left: 3px;
+}
+.resultsDeny{
+    background-color: #D32F2F;
+    border: 1px solid #388E3C;
+    border-radius: 10px;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 1rem;
+}
+.errorMessage{
+    color: #F5E6CC;
+    padding-left: 0;
 }

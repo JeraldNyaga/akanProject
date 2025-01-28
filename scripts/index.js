@@ -80,20 +80,24 @@ function showResult(akanName, validation, indexOfDay){
         let nameAkan = akanName;
         let dayBorn = daysOfWeek[indexOfDay];
 
-        let preMessageAkan = ` ${nameAkan}`;
-        let preMessageDay = ` ${dayBorn}`;
-
-        document.getElementById("results").style.display="block";
-        document.getElementById("akanSpan").innerText = preMessageAkan;
-        document.getElementById("dayBorn").innerText = preMessageDay;
+        document.getElementById("results").classList.add("resultsAccept");
+        document.getElementById("AkanName").classList.remove("errorMessage");
+        document.getElementById("dayWeek").classList.remove("errorMessage");
+        document.getElementById("results").classList.remove("resultsDeny");
+        document.getElementById("AkanName").textContent = `Your Akan name is`;
+        document.getElementById("dayWeek").textContent = `You were born on:`;
+        document.getElementById("akanSpan").textContent = nameAkan;
+        document.getElementById("dayBorn").textContent = dayBorn;
     }
     else{
         let errorMsg = validateMonthInput()[1];
-        document.getElementById("results").style.display = "block";
-        document.getElementById("results").style.backgroundColor = "#D32F2F";   
-        document.getElementById("AkanName").innerText = errorMsg;
-        document.getElementById("dayWeek").innerText = "Try Again";
-        document.getElementById("AkanName").style.color = "#F5E6CC";
-        document.getElementById("dayWeek").style.color = "#F5E6CC";
+        document.getElementById("results").classList.remove("resultsAccept");
+        document.getElementById("results").classList.add("resultsDeny");
+        document.getElementById("AkanName").classList.add("errorMessage");
+        document.getElementById("dayWeek").classList.add("errorMessage");
+        document.getElementById("AkanName").textContent = errorMsg;
+        document.getElementById("dayWeek").textContent = "Try Again";
+        document.getElementById("akanSpan").textContent = "";
+        document.getElementById("dayBorn").textContent = "";
     }
 }
